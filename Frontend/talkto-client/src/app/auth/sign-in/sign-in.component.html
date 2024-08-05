@@ -1,12 +1,60 @@
-<img src="assets/among.jpg" alt="Among Us" class="img-fluid">
-
 <div class="vh-100 d-flex justify-content-center align-items-center">
     <div class="card text-center">
-        <div class="col-6">
-            <h1>TALKTO</h1>
+
+        <div class="row container mt-4">
+            <div class="col-6">
+                <img src="assets/images/TalkTo2.png" width="300px">
+              
+                <form class="needs-validation m-2 mt-3" (ngSubmit)="onSubmit()" [formGroup]="signInForm" novalidate>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <label class="form-label text-start" for="email">Email: </label>
+                                <div class="input-group has-validation">
+                                    <input type="email" class="form-control form-control-lg" id="email"
+                                        formControlName="email" placeholder="Email" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4">
+                                <label class="form-label text-start" for="password">Password:
+                                </label>
+                                <div class="input-group has-validation">
+                                    <input type="password" class="form-control form-control-lg" id="password"
+                                        formControlName="password" placeholder="Password" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid password.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </form>
+
+                <div class="row mt-4 mb-4">
+                    <div class="col-12">
+                        <button class="btn btn-primary btn-lg" type="submit">Sign In</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="image-container">
+                    <img src="assets/images/Team_chat.png" class="img-fluid">
+                </div>
+                
+
+            </div>
+
         </div>
-        <div class="col-6">
-            <img src="assets/among.jpg">
-        </div>
+
+
     </div>
 </div>
